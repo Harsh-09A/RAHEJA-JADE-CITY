@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Trajan_Pro_Bold";
+  src: url("../fonts/Trajan_Pro_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "varsity_regular";
+  src: url("../fonts/varsity_regular.ttf") format("truetype");
+}
+
+:root,
+html {
+  font-family: Roboto, "Times New Roman", Times, serif;
+  scroll-padding-top: 70px;
+  line-height: 1.15;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --colorPrimary: #175ba7;
+  --colorSecondary: #18a54d;
+  --colorBlack: #000000;
+  --colorWhite: #ffffff;
+  --colorOffWhite: #f7f7f7;
+  --colorBorderWhite: #dbe4e9;
+  --colorBlack: #000000;
+  --colorHalfBlack: #333333;
+  --colorBackgroundBlack: #343a40bd;
+  --colorThemeBlack: #020202;
+}
+
+/* Navbar Starts */
+header {
+  height: 80px;
+}
+
+/* Navbar */
+.navbar-nav {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav .nav-link {
+  color: var(--colorBlack);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  background-color: var(--colorPrimary);
+  height: 100%;
+  color: var(--colorWhite);
+}
+
+.nav-link:hover {
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+}
+
+.nav-icon {
+  margin-right: 5px;
+}
+@media only screen and (min-width: 1000px) {
+  .navbar-nav .nav-link {
+    font-size: 1.01vw !important;
+    letter-spacing: 0.02vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-brand img {
+    height: 45px;
+  }
+}
+
+/* Navbar Ends */
+
+main {
+  margin-top: 80px;
+}
+
+/* Slider */
+.carousel {
+  overflow: hidden !important;
+  max-height: calc(100vh - 80px);
+}
+
+.carousel-indicators .active {
+  background-color: var(--colorSecondary) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-item .banner1 {
+    content: url("../img/banners/mobile_banner3.jpg");
+  }
+  .carousel-item .banner2 {
+    content: url("../img/banners/mobile_banner2.jpg");
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--colorPrimary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 20px;
+  /* display: none; */
+}
+
+/* InfoBox */
+.info-box {
+  padding-bottom: 20px;
+  color: var(--colorBlack);
+}
+.info-status {
+  font-size: 1em;
+  text-shadow: 0 1px 2px var(--colorHalfBlack);
+  background-color: var(--colorPrimary);
+  display: block;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  color: var(--colorWhite);
+}
+
+.info-title {
+  font-size: 1.9em;
+  font-weight: 600;
+  padding: 1.2vw 0.8vw 0.3vw;
+  text-transform: uppercase;
+  font-family: "Trajan_Pro_Bold";
+}
+
+.info-location {
+  font-size: 15px;
+  padding: 3px 4px 0 0;
+}
+
+/* Color Card */
+.card-d {
+  width: 95%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.info-box span.heading2 {
+  font-weight: 400;
+  width: 9em !important;
+  display: inline-block;
+}
+.info-box span.heading1,
+.info-box span.heading2 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9em;
+}
+.info-box span.heading1 {
+  font-weight: 700;
+  width: 9em !important;
+  display: inline-block;
+}
+
+/* Offer Box */
+.of-box {
+  font-size: 15px;
+  width: 95%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-weight: 700;
+  text-align: center;
+
+  padding: 8px;
+}
+
+.offer-text {
+  display: block;
+  font-size: 0.9em !important;
+  color: var(--colorWhite);
+  border: 2px dashed var(--colorWhite);
+  padding: 10px 5px;
+}
+
+/* Tagline & Price */
+.info-tag-line {
+  display: block;
+  padding: 0.1vw 0.8vw;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 0.9em;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-price {
+  display: block;
+  text-align: center;
+  padding: 0.1vw 0.8vw 0.3vw;
+  font-size: 1.8em;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 28px;
+}
+.offer-bg-animation {
+  color: var(--colorWhite);
+  display: block;
+  background: linear-gradient(
+    -45deg,
+    var(--colorPrimary),
+    var(--colorSecondary),
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
+  background-size: 400% 400%;
+  -webkit-animation: 3s infinite Gradient;
+  -moz-animation: 3s infinite Gradient;
+  animation: 3s infinite Gradient;
+}
+
+/*  */
+/* For Desktop */
+/* InfoBox */
+@media only screen and (min-width: 990px) {
+  .info-box {
+    color: var(--colorBlack);
+    width: 25vw;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    z-index: 9;
+    margin-top: 7em;
+    padding-bottom: 1.5vw;
+    display: inline-block;
+    background-color: var(--colorWhite);
+    border-radius: 15px;
+    border: 3px solid var(--colorBorderWhite); /*gradient Border animation */
+    /* padding-top: 1.5vw; */
+  }
+
+  .info-status {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .info-box .info-title {
+    font-size: 1.5em;
+    padding: 5px 3px 5px;
+  }
+  .info-location {
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* All Buttons */
+.pro-button {
+  font-size: 1.1em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+
+/* Overview */
+.overview_img {
+  margin-bottom: 20px; /* Creates overlap effect */
+}
+
+.overview_img img {
+  border-radius: 20px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Highlights */
+.highlights {
+  text-align: left;
+}
+.whybuy li:before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--colorPrimary);
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.whybuy li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 0;
+  background: var(--colorPrimary);
+  top: 0;
+  z-index: 1;
+  transition: ease all 0.5s;
+}
+
+.whybuy li {
+  background: #eaeaea;
+  margin-bottom: 15px;
+  padding: 15px 10px 15px 30px;
+  position: relative;
+  list-style: none;
+}
+
+.whybuy {
+  content: "";
+  padding-left: 0;
+}
+
+.whybuy li:hover::after {
+  width: 100%;
+  transition: ease all 0.5s;
+}
+
+.whybuy li:hover:before {
+  background: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.whybuy li:hover {
+  color: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.whybuy li span {
+  position: relative;
+  z-index: 2;
+  padding-left: 10px;
+}
+
+/* gallery */
+
+#gallery_section .row {
+  --bs-gutter-y: 1.5rem;
+}
+
+.gall {
+  border: 2px dashed var(--colorPrimary);
+  border-radius: 20px;
+  padding: 7px;
+  background-color: #f1f1f1;
+  box-shadow: rgba(14, 30, 37, 0.5) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.5) 0px 2px 16px 0px;
+  /* box-shadow: rgba(100, 100, 111, 0.726) 0px 7px 29px 0px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+
+.gall img {
+  border-radius: 20px;
+  aspect-ratio: 4/3;
+}
