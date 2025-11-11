@@ -303,7 +303,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--p);
+  background: var(--colorPrimary);
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
